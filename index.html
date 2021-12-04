@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    Numer elementu cigu Fibonacciego <input type="number"/>
+    <button onclick="show()"> OBLICZ</button>
+    <h4 id="FibResult"></h4>
+    
+    <script>
+        function show(){
+        const val = document. querySelector('input'). value;
+        let [prev, next] =  [0, 1];
+
+    for (let i = 0; i < val; i++) {
+    let temp = next;
+    next = prev + next;
+    prev = temp;
+         }
+	
+    document.getElementById("FibResult").innerHTML="Element numer "+val+" = "+prev;
+        }
+      
+    </script>
+</body>
+</html>
