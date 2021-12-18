@@ -1,0 +1,11 @@
+version: "3"
+services:
+  apache:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: apache
+    ports:
+      - 8888:80
+    extra_hosts:
+    - "localhost:127.0.0.1"
